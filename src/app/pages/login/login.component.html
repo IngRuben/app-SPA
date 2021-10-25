@@ -1,0 +1,103 @@
+<div class="limiter animated fadeInLeft">
+  <!--img src="assets\images\Gofer_Logo.jpg" class="card-img-top" alt=""-->
+
+  <div class="logo text-center mt-5">
+    <a href="http://goferalcohol.trioangle.com">
+      <img src="http://goferalcohol.trioangle.com//storage/images/site_setting/goferalcohol-logo1569222236.png" width="130" height="">
+    </a>
+  </div>
+  <div class="container-login100">
+    <div class="wrap-login100 p-t-50 p-b-90">
+      <form (ngSubmit)="login(f)" #f="ngForm"
+            class="login100-form validate-form flex-sb flex-w">
+
+                <span class="login100-form-title p-b-51">
+                    Login
+                </span>
+
+        <span *ngIf="f.submitted && f.controls['email'].errors"
+              class="text-danger animated fadeIn">
+                         El correo es obligatorio
+                       </span>
+
+        <div class="wrap-input100 m-b-16">
+          <input class="input100"
+                 type="email"
+                 name="email"
+                 placeholder="Email"
+                 required="required"
+                 email
+                 [(ngModel)]="usuario.email">
+
+          <span class="focus-input100"></span>
+        </div>
+
+        <span *ngIf="f.submitted && f.controls['password'].errors"
+              class="text-danger animated fadeIn">
+                          La contraseña debe tener mínimo 6 carácteres
+                        </span>
+        <div class="wrap-input100 m-b-16" data-validate="Password is required">
+          <input class="input100"
+                 type="password"
+                 name="password"
+                 placeholder="Password"
+                 required
+                 minlength="6"
+                 [(ngModel)]="usuario.password">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="flex-sb-m w-full p-t-3 p-b-24">
+          <div class="contact100-form-checkbox">
+            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+            <label class="label-checkbox100" for="ckb1">
+              Recordar mi usuario
+            </label>
+          </div>
+
+          <div>
+            <a routerLink="/registro" class="txt1">
+              ¿No tienes cuenta?
+            </a>
+          </div>
+        </div>
+        <div class="container-login100-form-btn m-t-17">
+          <div class="forget_link">
+            <a href="http://goferalcohol.trioangle.com/forgot_password">¿Olvidó su contraseña? </a>
+            <a href="http://goferalcohol.trioangle.com/help/user">Obtener ayuda</a>
+          </div>
+
+          <button class="btn btn-theme w-100 mt-3 d-flex justify-content-between align-items-center"style="background-color: tomato " type="submit">CONTINUAR <i class="fas fa-arrow-right"></i></button>
+
+        </div>
+
+        <head>
+          <title>Gofer Alcohol</title>
+          <meta charset="utf-8" time="22:35">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="icon" href="http://goferalcohol.trioangle.com//storage/images/site_setting/fav-icon-alcohol1569241042.png" type="image/gif" sizes="14x26">
+          <link href="http://goferalcohol.trioangle.com/css/common.css" rel="stylesheet">
+          <link href="http://goferalcohol.trioangle.com/css/animate.css" rel="stylesheet">
+          <link href="http://goferalcohol.trioangle.com/css/bootstrap-toggle.min.css" rel="stylesheet">
+          <link href="http://goferalcohol.trioangle.com/css/toastr.min.css" rel="stylesheet">
+          <script src=" http://goferalcohol.trioangle.com/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+          <style type="text/css">
+            main {
+              opacity: 0;
+            }
+            .ng-cloak {
+              display: none;
+            }
+          </style>
+        </head>
+      </form>
+    </div>
+  </div>
+</div>
+
+
